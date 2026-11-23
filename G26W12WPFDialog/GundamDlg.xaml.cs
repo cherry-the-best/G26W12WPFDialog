@@ -10,13 +10,13 @@ public partial class GundamDlg : Window
         InitializeComponent();
     }
 
-    public string GundamName => NameInput.Text.Trim();
-    public string ModelName => ModelInput.Text.Trim();
+    public string MSName => NameInput.Text.Trim();
+    public string MSModel => ModelInput.Text.Trim();
     public string Faction => ((ComboBoxItem)FactionInput.SelectedItem).Content.ToString()!;
 
     private void OnConfirm(object sender, RoutedEventArgs e)
     {
-        if (GundamName.Length == 0 || ModelName.Length == 0)
+        if (MSName.Length == 0 || MSModel.Length == 0)
         {
             MessageBox.Show(this, "이름과 모델을 모두 입력하세요");
             return;
